@@ -8,7 +8,7 @@
 
 #import "CardView.h"
 @interface CardView()
-@property (nonatomic, strong) UIImage   *cardImage;
+
 @property (nonatomic, strong) UIImage   *resultCard;
 @end
 @implementation CardView

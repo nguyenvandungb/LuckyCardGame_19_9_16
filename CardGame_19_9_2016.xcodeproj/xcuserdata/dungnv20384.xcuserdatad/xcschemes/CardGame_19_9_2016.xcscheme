@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "CB7FD6861920A93B001D30BD"
-               BuildableName = "Coin_game.app"
+               BuildableName = "CardGame_19_9_2016.app"
                BlueprintName = "CardGame_19_9_2016"
                ReferencedContainer = "container:CardGame_19_9_2016.xcodeproj">
             </BuildableReference>
@@ -33,7 +33,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "CB7FD6861920A93B001D30BD"
-            BuildableName = "Coin_game.app"
+            BuildableName = "CardGame_19_9_2016.app"
             BlueprintName = "CardGame_19_9_2016"
             ReferencedContainer = "container:CardGame_19_9_2016.xcodeproj">
          </BuildableReference>
@@ -56,7 +56,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "CB7FD6861920A93B001D30BD"
-            BuildableName = "Coin_game.app"
+            BuildableName = "CardGame_19_9_2016.app"
             BlueprintName = "CardGame_19_9_2016"
             ReferencedContainer = "container:CardGame_19_9_2016.xcodeproj">
          </BuildableReference>
@@ -75,7 +75,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "CB7FD6861920A93B001D30BD"
-            BuildableName = "Coin_game.app"
+            BuildableName = "CardGame_19_9_2016.app"
             BlueprintName = "CardGame_19_9_2016"
             ReferencedContainer = "container:CardGame_19_9_2016.xcodeproj">
          </BuildableReference>

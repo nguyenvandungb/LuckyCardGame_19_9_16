@@ -100,6 +100,7 @@ static FSInputPlayCountViewController *_controller = nil;
 //method to move the view up/down whenever the keyboard is shown/dismissed
 - (void)setViewMovedUp:(BOOL)movedUp
 {
+    return;
     moveViewUp = movedUp;
     [UIView beginAnimations:nil context:NULL];
     [UIView setAnimationDuration:0.3]; // if you want to slide up the view
@@ -158,54 +159,13 @@ static FSInputPlayCountViewController *_controller = nil;
 }
 - (void) didReturnPressed :(FSSTDNumberKeyboardViewController *)_keyboardController
 {
-    AppDelegate *app = [AppDelegate shareInstance];
-    CGRect r = self.keyboardController.view.frame;
-    [UIView beginAnimations:nil context:NULL];
-    [UIView setAnimationDuration:0.3];
-    r.origin.y = 769;
-    self.keyboardController.view.frame =r;
-    
-    [UIView commitAnimations];
-    
-    [self setViewMovedUp:NO];
-    
-    long long totalRemain = 0;
-    BOOL  _isShowAlert = YES;
-    NSArray *arr = [Reward MR_findAllWithPredicate:[NSPredicate predicateWithFormat:@"isEnable = %d",1] inContext:[NSManagedObjectContext MR_defaultContext]];
-    for (int i = 0 ; i <[arr count]; i++)
-    {
-        Reward *__mo = [arr objectAtIndex:i];
-        RewardInfo *info = [[RewardInfo alloc] initWithCoreData:__mo];
-        if (info.rwID!=6 && info.remain!=0)
-        {
-            _isShowAlert =  NO;
-        }
-        totalRemain += info.remain;
-    }
-    
-    if (totalRemain <=0 && _isShowAlert)
-    {
-        NSInteger it = [[NSUserDefaults standardUserDefaults] integerForKey:KEY_SETTING_FOR_NO_REMAIN];
-        if (it==1)
-        {
-            UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"アラート"
-                                                                message:@"残り本数がなくなりました。"
-                                                               delegate:self
-                                                      cancelButtonTitle:@"閉じる"
-                                                      otherButtonTitles:nil, nil];
-            alertView.delegate = self;
-            [alertView show];
-            return;
-        }
-        
-    }
-
     NSInteger count = [self.numPlayTextField.text integerValue];
     if (count == 0)
     {
         return;
     }
     [self.numPlayTextField resignFirstResponder];
+    AppDelegate *app = [AppDelegate shareInstance];
     [app playSound:app.buttonSound];
     
     PlayViewController *controller = [[UIStoryboard storyboardWithName:@"Storyboard" bundle:nil] instantiateViewControllerWithIdentifier:@"PlayViewController"];

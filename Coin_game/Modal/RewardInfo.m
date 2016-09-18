@@ -28,6 +28,18 @@
     
     
 }
+
+- (void) saveToCoreDataWithPlayedTime:(NSInteger)nb
+{
+    Reward* __mo = [Reward MR_findFirstWithPredicate:[NSPredicate predicateWithFormat:@"rwID=%d",self.rwID] inContext:[NSManagedObjectContext MR_defaultContext]];
+    if (__mo) {
+        NSInteger lastPlayed = [__mo.played integerValue];
+        NSInteger lastRemain = [__mo.remain integerValue];
+        __mo.played = @(lastPlayed + nb);
+        __mo.remain = @(lastRemain - nb);
+    }
+}
+
 - (id) initWithCoreData:(Reward *)info
 {
     if (!info){

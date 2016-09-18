@@ -15,7 +15,7 @@
                         <viewControllerLayoutGuide type="bottom" id="v1j-pu-mjS"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="aYd-Af-qee">
-                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="back.png" translatesAutoresizingMaskIntoConstraints="NO" id="rR9-a7-jlP"/>
@@ -74,7 +74,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9J9-sk-q8W" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="549.609375" y="57.8125"/>
+            <point key="canvasLocation" x="549.21875" y="57.421874999999993"/>
         </scene>
         <!--Result View Controller-->
         <scene sceneID="kW5-UO-JmG">
@@ -85,7 +85,7 @@
                         <viewControllerLayoutGuide type="bottom" id="yHA-q1-opC"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="1TD-Aa-ZqY">
-                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="result.png" translatesAutoresizingMaskIntoConstraints="NO" id="mcR-0i-flI"/>

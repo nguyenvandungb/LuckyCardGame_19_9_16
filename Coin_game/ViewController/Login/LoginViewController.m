@@ -6,7 +6,7 @@
 #import "LoginViewController.h"
 #import "SettingViewController.h"
 #import "PlayViewController.h"
-
+#import "Service.h"
 
 
 @interface LoginViewController()
@@ -133,6 +133,29 @@
 }
 
 - (void)gotoInputBulkValueScreen {
+    AppDelegate *app = [AppDelegate shareInstance];
+    long long totalRemain = 0;
+    BOOL  _isShowAlert = [Service getEstablishBool];
+    NSArray *arr = [Reward MR_findAllWithPredicate:[NSPredicate predicateWithFormat:@"isEnable = %d",1] inContext:[NSManagedObjectContext MR_defaultContext]];
+    for (int i = 0 ; i <[arr count]; i++)
+    {
+        Reward *__mo = [arr objectAtIndex:i];
+        RewardInfo *info = [[RewardInfo alloc] initWithCoreData:__mo];
+        totalRemain += info.remain;
+    }
+    
+    if (totalRemain <=0 && _isShowAlert)
+    {
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"アラート"
+                                                            message:@"残り本数がなくなりました。"
+                                                           delegate:self
+                                                  cancelButtonTitle:@"閉じる"
+                                                  otherButtonTitles:nil, nil];
+        alertView.delegate = self;
+        [alertView show];
+        return;
+    }
+
     FSInputPlayCountViewController *controller = [[FSInputPlayCountViewController alloc] initWithNibName:@"FSInputPlayCountViewController" bundle:nil];
     controller.numPlayTextField.text = @"0";
     [self.navigationController pushViewController:controller animated:YES];

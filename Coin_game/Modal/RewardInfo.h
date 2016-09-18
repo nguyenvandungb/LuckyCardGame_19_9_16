@@ -26,6 +26,7 @@
 - (void) showLog;
 - (void) deselect;
 - (void) saveToCoreData;
+- (void) saveToCoreDataWithPlayedTime:(NSInteger)nb;
 - (id) initWithCoreData:(Reward *)info;
 - (id)copyWithZone:(NSZone *)zone;
 @end

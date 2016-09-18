@@ -285,7 +285,7 @@
     Reward *__mo = [Reward MR_findFirstWithPredicate:[NSPredicate predicateWithFormat:@"rwID = %d",rewardType] inContext:[NSManagedObjectContext MR_defaultContext]];
     if (__mo){
         RewardInfo *info = [[RewardInfo alloc] initWithCoreData:__mo];
-        if (info && info.rwID!=10)
+        if (info && info.rwID != max_id)
         {
             BOOL isEnable = info.isEnable;
             if (isEnable && [Service checkIfReachMinNumOfEnableRewards:2])

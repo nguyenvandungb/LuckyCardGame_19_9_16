@@ -22,6 +22,7 @@
 #define kErrorSettingMessage @"残り本数がありません。"
 
 #define DB_NAME @"LuckyPadSony.sqlite"
+#define  max_id 7
 @interface Utils : NSObject
 + (void) writeDataToFile: (NSString *) contentToExpand;
 + (NSString *)generateUUID;

@@ -12,10 +12,10 @@
 {
     
 }
-
+@property (nonatomic, strong) UIImage   *cardImage;
 @property (nonatomic, assign)  CGRect       placeRect;
 
-
+-(void) flipCard;
 - (void) setResultCard:(UIImage *)img;
 - (void) setCardImage:(UIImage *)img;
 - (void) shake :(CGRect)nrect;

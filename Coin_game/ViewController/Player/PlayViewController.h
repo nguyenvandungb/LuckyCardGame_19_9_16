@@ -14,6 +14,7 @@
 @property (weak, nonatomic) IBOutlet CardView *card1;
 @property (weak, nonatomic) IBOutlet CardView *card2;
 @property (weak, nonatomic) IBOutlet CardView *card3;
+@property (strong, nonatomic) IBOutlet CardView *backCardView;
 @property (weak, nonatomic) IBOutlet UILabel *playCountLbl;
 
 @end

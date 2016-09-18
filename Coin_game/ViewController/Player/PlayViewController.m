@@ -18,6 +18,7 @@
     BOOL flag;
     AVAudioPlayer *Shellspinning;
     AVAudioPlayer *Shellstopped;
+    BOOL flipped;
 }
 @property (nonatomic, strong) NSMutableArray *results;
 @property (nonatomic, strong) NSMutableArray *resultsInteracting;
@@ -25,6 +26,10 @@
 @property (nonatomic, strong) NSMutableArray *listOfRewards;
 @property (strong, nonatomic) NSMutableArray *listOfTimeObjects;
 @property (strong, nonatomic) TimeObject *timeObject;
+@property (strong, nonatomic) CardView *currentCard;
+@property (weak, nonatomic) IBOutlet UIButton *backBtn;
+@property (nonatomic, strong) UITapGestureRecognizer *tap;
+
 @end
 
 @implementation PlayViewController
@@ -68,6 +73,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    _tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(backAction)];
+    _tap.numberOfTapsRequired = 3;
+    [self.view addGestureRecognizer:_tap];
     flag = NO;
     [self loadMusicToApp];
     _winReward = nil;
@@ -86,9 +94,9 @@
 }
 
 - (void) reset {
-    [_card1 setCardImage:[UIImage imageNamed:@"card.png"]];
-    [_card2 setCardImage:[UIImage imageNamed:@"card.png"]];
-    [_card3 setCardImage:[UIImage imageNamed:@"card.png"]];
+    [_card1 setCardImage:[UIImage imageNamed:@"cardbg1.png"]];
+    [_card2 setCardImage:[UIImage imageNamed:@"cardbg2.png"]];
+    [_card3 setCardImage:[UIImage imageNamed:@"cardbg3.png"]];
     [_card1 setResultCard: nil];
     [_card2 setResultCard: nil];
     [_card3 setResultCard: nil];
@@ -108,21 +116,40 @@
 
 - (void) allowsTapOnCardView
 {
-    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self
+    UITapGestureRecognizer *tap1 = [[UITapGestureRecognizer alloc] initWithTarget:self
                                                                           action:@selector(cardView1Tapped:)];
-    [self.card1 addGestureRecognizer: tap];
-    tap = [[UITapGestureRecognizer alloc] initWithTarget:self
+    [self.card1 addGestureRecognizer: tap1];
+    UITapGestureRecognizer *tap2 = [[UITapGestureRecognizer alloc] initWithTarget:self
                                                                           action:@selector(cardView2Tapped:)];
-    [self.card2 addGestureRecognizer: tap];
+    [self.card2 addGestureRecognizer: tap2];
     
-    tap = [[UITapGestureRecognizer alloc] initWithTarget:self
+    UITapGestureRecognizer *tap3 = [[UITapGestureRecognizer alloc] initWithTarget:self
                                                   action:@selector(cardView3Tapped:)];
-    [self.card3 addGestureRecognizer: tap];
+    [self.card3 addGestureRecognizer: tap3];
 }
 
 - (void) resetForNextGame {
-    [self reset];
-    self.winReward = nil;
+    _backCardView = [[CardView alloc] initWithFrame:self.currentCard.bounds];
+    _backCardView.backgroundColor = [UIColor clearColor];
+    [_backCardView setCardImage:[self.currentCard cardImage]];
+    [UIView transitionWithView:self.currentCard
+                      duration: 0.7
+                       options:UIViewAnimationOptionTransitionFlipFromLeft
+                    animations:^{
+                        self.currentCard.alpha = 0.5;
+                        [self.currentCard addSubview:_backCardView];
+                        
+                    } completion:^(BOOL finished) {
+                        flag = false;
+                        [self reset];
+                        self.winReward = nil;
+                        [UIView animateWithDuration:0.2 animations:^{
+                          //  self.backCardView.alpha = 0.0;
+                            self.currentCard.alpha = 1.0;
+                        } completion:^(BOOL finished) {
+                            [self.backCardView removeFromSuperview];
+                        }];
+                    }];
 }
 
 -  (void) cardView1Tapped:(UITapGestureRecognizer *)tap {
@@ -146,10 +173,16 @@
 
 - (void) showCardChoosed:(CardView *)cardView
 {
+    [self.view removeGestureRecognizer:_tap];
+    if (flag) {
+        return;
+    }
+    flag = true;
     if (![self verify]) {
         return;
     }
     
+    self.currentCard = cardView;
     AppDelegate *app = [AppDelegate shareInstance];
     if (app.gameType == TYPE_PLAY_ALL) {
         self.winReward = [self.resultsInteracting firstObject];
@@ -214,7 +247,7 @@
                     }
                     
                 }
-                [self performSelector:@selector(didFinishPlaySection) withObject:nil afterDelay:1];
+                [self didFinishPlaySection];
             }];
         }];
     }];
@@ -222,6 +255,8 @@
 
 - (void)didFinishPlaySection {
     [self saveGameResult];
+    [_backBtn addGestureRecognizer:_tap];
+    sleep(1);
     if (self.playCount > 0) {
         [self resetForNextGame];
     } else {
@@ -344,6 +379,12 @@
     }
 }
 
+- (void)resetPlayedTime:(NSMutableArray *)list {
+    for (RewardInfo *temp in list) {
+        temp.numberOfCurrentPlayed = 0;
+    }
+}
+
 - (void) calculateWin {
     NSMutableArray *calculateingArrays = [[NSMutableArray alloc] initWithArray:self.listOfRewards];
     self.winReward = nil;
@@ -361,14 +402,18 @@
                 }
             }
         }
+        [self resetPlayedTime:calculateingArrays];
         while (self.results.count < self.playCount) {
             RewardInfo *info = [[CoreLuckyGame shareInstance] calculateReward:calculateingArrays];
             if (info.rwID < 3) {
                 [self removeRewardWithIds:@[@(0),@(1),@(2)] fromArraty:calculateingArrays];
             }
             [self.results addObject:[info copy]];
+            [self resetPlayedTime:calculateingArrays];
         }
     }
+    
+    
     if (self.results.count > 0) {
         if (self.results.count > 1) {
             [self.results sortUsingComparator:^NSComparisonResult(RewardInfo* obj1, RewardInfo* obj2) {
@@ -426,17 +471,14 @@
 }
 
 - (void)saveGameResult {
-    for (TimeObject *info in self.listOfTimeObjects) {
-        [info saveToDatabase];
-    }
     if ([AppDelegate shareInstance].gameType == TYPE_PLAY_ALL) {
         for (RewardInfo *info in self.results) {
-            [info saveToCoreData];
+            [info saveToCoreDataWithPlayedTime:info.numberOfCurrentPlayed];
             [self writeDataToCSVFile: info];
         }
     } else {
         if (self.winReward) {
-            [self.winReward saveToCoreData];
+            [self.winReward saveToCoreDataWithPlayedTime:self.winReward.numberOfCurrentPlayed];
             [self writeDataToCSVFile:self.winReward];
         }
     }
@@ -476,4 +518,7 @@
 }
 
 
+- (IBAction)backAction {
+    [self.navigationController popToRootViewControllerAnimated:true];
+}
 @end

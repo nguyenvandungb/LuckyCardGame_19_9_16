@@ -18,17 +18,17 @@
 		5D0D96A91D8E3F3600CCE29D /* screenÅ|03.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D0D96A81D8E3F3600CCE29D /* screenÅ|03.png */; };
 		5D0D96AC1D8E3F6C00CCE29D /* CardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D0D96AB1D8E3F6C00CCE29D /* CardView.m */; };
 		5D0D96B91D8E40E700CCE29D /* card.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D0D96AD1D8E40E700CCE29D /* card.png */; };
-		5D0D96BA1D8E40E700CCE29D /* card1.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D0D96AE1D8E40E700CCE29D /* card1.png */; };
-		5D0D96BB1D8E40E700CCE29D /* card2.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D0D96AF1D8E40E700CCE29D /* card2.png */; };
-		5D0D96BC1D8E40E700CCE29D /* card3.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D0D96B01D8E40E700CCE29D /* card3.png */; };
-		5D0D96BD1D8E40E700CCE29D /* card4.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D0D96B11D8E40E700CCE29D /* card4.png */; };
-		5D0D96BE1D8E40E700CCE29D /* card5.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D0D96B21D8E40E700CCE29D /* card5.png */; };
-		5D0D96BF1D8E40E700CCE29D /* card6.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D0D96B31D8E40E700CCE29D /* card6.png */; };
-		5D0D96C01D8E40E700CCE29D /* card7.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D0D96B41D8E40E700CCE29D /* card7.png */; };
-		5D0D96C11D8E40E700CCE29D /* card8.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D0D96B51D8E40E700CCE29D /* card8.png */; };
-		5D0D96C21D8E40E700CCE29D /* card9.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D0D96B61D8E40E700CCE29D /* card9.png */; };
-		5D0D96C31D8E40E700CCE29D /* card10.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D0D96B71D8E40E700CCE29D /* card10.png */; };
-		5D0D96C41D8E40E700CCE29D /* card11.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D0D96B81D8E40E700CCE29D /* card11.png */; };
+		5D0D96BA1D8E40E700CCE29D /* cardbg1.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D0D96AE1D8E40E700CCE29D /* cardbg1.png */; };
+		5D0D96BB1D8E40E700CCE29D /* cardbg2.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D0D96AF1D8E40E700CCE29D /* cardbg2.png */; };
+		5D0D96BC1D8E40E700CCE29D /* cardbg3.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D0D96B01D8E40E700CCE29D /* cardbg3.png */; };
+		5D0D96BD1D8E40E700CCE29D /* card1.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D0D96B11D8E40E700CCE29D /* card1.png */; };
+		5D0D96BE1D8E40E700CCE29D /* card2.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D0D96B21D8E40E700CCE29D /* card2.png */; };
+		5D0D96BF1D8E40E700CCE29D /* card3.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D0D96B31D8E40E700CCE29D /* card3.png */; };
+		5D0D96C01D8E40E700CCE29D /* card4.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D0D96B41D8E40E700CCE29D /* card4.png */; };
+		5D0D96C11D8E40E700CCE29D /* card5.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D0D96B51D8E40E700CCE29D /* card5.png */; };
+		5D0D96C21D8E40E700CCE29D /* card6.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D0D96B61D8E40E700CCE29D /* card6.png */; };
+		5D0D96C31D8E40E700CCE29D /* card7.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D0D96B71D8E40E700CCE29D /* card7.png */; };
+		5D0D96C41D8E40E700CCE29D /* card8.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D0D96B81D8E40E700CCE29D /* card8.png */; };
 		5D0D96C61D8E608F00CCE29D /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D0D96C51D8E608F00CCE29D /* Launch Screen.storyboard */; };
 		5D6D7C111C43F9A700CA0E07 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D6D7B2A1C43F9A700CA0E07 /* AppDelegate.m */; };
 		5D6D7C121C43F9A700CA0E07 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5D6D7B2B1C43F9A700CA0E07 /* InfoPlist.strings */; };
@@ -178,17 +178,17 @@
 		5D0D96AA1D8E3F6C00CCE29D /* CardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardView.h; sourceTree = "<group>"; };
 		5D0D96AB1D8E3F6C00CCE29D /* CardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardView.m; sourceTree = "<group>"; };
 		5D0D96AD1D8E40E700CCE29D /* card.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = card.png; sourceTree = "<group>"; };
-		5D0D96AE1D8E40E700CCE29D /* card1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = card1.png; sourceTree = "<group>"; };
-		5D0D96AF1D8E40E700CCE29D /* card2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = card2.png; sourceTree = "<group>"; };
-		5D0D96B01D8E40E700CCE29D /* card3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = card3.png; sourceTree = "<group>"; };
-		5D0D96B11D8E40E700CCE29D /* card4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = card4.png; sourceTree = "<group>"; };
-		5D0D96B21D8E40E700CCE29D /* card5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = card5.png; sourceTree = "<group>"; };
-		5D0D96B31D8E40E700CCE29D /* card6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = card6.png; sourceTree = "<group>"; };
-		5D0D96B41D8E40E700CCE29D /* card7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = card7.png; sourceTree = "<group>"; };
-		5D0D96B51D8E40E700CCE29D /* card8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = card8.png; sourceTree = "<group>"; };
-		5D0D96B61D8E40E700CCE29D /* card9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = card9.png; sourceTree = "<group>"; };
-		5D0D96B71D8E40E700CCE29D /* card10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = card10.png; sourceTree = "<group>"; };
-		5D0D96B81D8E40E700CCE29D /* card11.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = card11.png; sourceTree = "<group>"; };
+		5D0D96AE1D8E40E700CCE29D /* cardbg1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cardbg1.png; sourceTree = "<group>"; };
+		5D0D96AF1D8E40E700CCE29D /* cardbg2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cardbg2.png; sourceTree = "<group>"; };
+		5D0D96B01D8E40E700CCE29D /* cardbg3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cardbg3.png; sourceTree = "<group>"; };
+		5D0D96B11D8E40E700CCE29D /* card1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = card1.png; sourceTree = "<group>"; };
+		5D0D96B21D8E40E700CCE29D /* card2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = card2.png; sourceTree = "<group>"; };
+		5D0D96B31D8E40E700CCE29D /* card3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = card3.png; sourceTree = "<group>"; };
+		5D0D96B41D8E40E700CCE29D /* card4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = card4.png; sourceTree = "<group>"; };
+		5D0D96B51D8E40E700CCE29D /* card5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = card5.png; sourceTree = "<group>"; };
+		5D0D96B61D8E40E700CCE29D /* card6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = card6.png; sourceTree = "<group>"; };
+		5D0D96B71D8E40E700CCE29D /* card7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = card7.png; sourceTree = "<group>"; };
+		5D0D96B81D8E40E700CCE29D /* card8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = card8.png; sourceTree = "<group>"; };
 		5D0D96C51D8E608F00CCE29D /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		5D6D7B291C43F9A700CA0E07 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		5D6D7B2A1C43F9A700CA0E07 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -424,17 +424,17 @@
 			isa = PBXGroup;
 			children = (
 				5D0D96AD1D8E40E700CCE29D /* card.png */,
-				5D0D96AE1D8E40E700CCE29D /* card1.png */,
-				5D0D96AF1D8E40E700CCE29D /* card2.png */,
-				5D0D96B01D8E40E700CCE29D /* card3.png */,
-				5D0D96B11D8E40E700CCE29D /* card4.png */,
-				5D0D96B21D8E40E700CCE29D /* card5.png */,
-				5D0D96B31D8E40E700CCE29D /* card6.png */,
-				5D0D96B41D8E40E700CCE29D /* card7.png */,
-				5D0D96B51D8E40E700CCE29D /* card8.png */,
-				5D0D96B61D8E40E700CCE29D /* card9.png */,
-				5D0D96B71D8E40E700CCE29D /* card10.png */,
-				5D0D96B81D8E40E700CCE29D /* card11.png */,
+				5D0D96AE1D8E40E700CCE29D /* cardbg1.png */,
+				5D0D96AF1D8E40E700CCE29D /* cardbg2.png */,
+				5D0D96B01D8E40E700CCE29D /* cardbg3.png */,
+				5D0D96B11D8E40E700CCE29D /* card1.png */,
+				5D0D96B21D8E40E700CCE29D /* card2.png */,
+				5D0D96B31D8E40E700CCE29D /* card3.png */,
+				5D0D96B41D8E40E700CCE29D /* card4.png */,
+				5D0D96B51D8E40E700CCE29D /* card5.png */,
+				5D0D96B61D8E40E700CCE29D /* card6.png */,
+				5D0D96B71D8E40E700CCE29D /* card7.png */,
+				5D0D96B81D8E40E700CCE29D /* card8.png */,
 			);
 			path = cards;
 			sourceTree = "<group>";
@@ -926,6 +926,11 @@
 			attributes = {
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = Applekikaku;
+				TargetAttributes = {
+					CB7FD6861920A93B001D30BD = {
+						DevelopmentTeam = HZ65PG3W65;
+					};
+				};
 			};
 			buildConfigurationList = CB7FD6821920A93B001D30BD /* Build configuration list for PBXProject "CardGame_19_9_2016" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -956,7 +961,7 @@
 				5D6D7C351C43F9A700CA0E07 /* Info.plist in Resources */,
 				5D0D96A91D8E3F3600CCE29D /* screenÅ|03.png in Resources */,
 				5D6D7C4B1C43F9A700CA0E07 /* back_btn.png in Resources */,
-				5D0D96BB1D8E40E700CCE29D /* card2.png in Resources */,
+				5D0D96BB1D8E40E700CCE29D /* cardbg2.png in Resources */,
 				5D6D7C5C1C43F9A700CA0E07 /* uncheck.png in Resources */,
 				5D6D7C781C43F9A700CA0E07 /* FSInputPlayCountViewController.xib in Resources */,
 				5D6D7C551C43F9A700CA0E07 /* inputData.png in Resources */,
@@ -964,8 +969,8 @@
 				5D6D7C901C43F9A700CA0E07 /* SettingTimeCell.xib in Resources */,
 				5D0AA0DC1CC341D500EB99A5 /* drumroll.aif in Resources */,
 				5D6D7C6F1C43F9A700CA0E07 /* n7.png in Resources */,
-				5D0D96C11D8E40E700CCE29D /* card8.png in Resources */,
-				5D0D96BA1D8E40E700CCE29D /* card1.png in Resources */,
+				5D0D96C11D8E40E700CCE29D /* card5.png in Resources */,
+				5D0D96BA1D8E40E700CCE29D /* cardbg1.png in Resources */,
 				5D6D7C7C1C43F9A700CA0E07 /* LoginViewController.xib in Resources */,
 				5D6D7C5A1C43F9A700CA0E07 /* SmallButton.png in Resources */,
 				5D6D7C6C1C43F9A700CA0E07 /* n4.png in Resources */,
@@ -991,18 +996,18 @@
 				5D6D7C5E1C43F9A700CA0E07 /* cannon_fire.wav in Resources */,
 				5D6D7C871C43F9A700CA0E07 /* InputDataViewController.xib in Resources */,
 				5D6D7C631C43F9A700CA0E07 /* music.wav in Resources */,
-				5D0D96C41D8E40E700CCE29D /* card11.png in Resources */,
+				5D0D96C41D8E40E700CCE29D /* card8.png in Resources */,
 				5D6D7C481C43F9A700CA0E07 /* play_times.png in Resources */,
 				5D6D7C8C1C43F9A700CA0E07 /* SettingCell.xib in Resources */,
 				5D0D96981D8E33B600CCE29D /* result.png in Resources */,
-				5D0D96BE1D8E40E700CCE29D /* card5.png in Resources */,
+				5D0D96BE1D8E40E700CCE29D /* card2.png in Resources */,
 				5D6D7C741C43F9A700CA0E07 /* timing_bg.png in Resources */,
 				5D6D7C571C43F9A700CA0E07 /* save_btn.png in Resources */,
-				5D0D96BD1D8E40E700CCE29D /* card4.png in Resources */,
-				5D0D96C01D8E40E700CCE29D /* card7.png in Resources */,
+				5D0D96BD1D8E40E700CCE29D /* card1.png in Resources */,
+				5D0D96C01D8E40E700CCE29D /* card4.png in Resources */,
 				5D6D7C681C43F9A700CA0E07 /* n0.png in Resources */,
 				5D6D7C7E1C43F9A700CA0E07 /* ChangePasscodeViewController.xib in Resources */,
-				5D0D96C21D8E40E700CCE29D /* card9.png in Resources */,
+				5D0D96C21D8E40E700CCE29D /* card6.png in Resources */,
 				5D6D7C711C43F9A700CA0E07 /* n9.png in Resources */,
 				5D6D7C501C43F9A700CA0E07 /* bgHeader.png in Resources */,
 				5D6D7C4C1C43F9A700CA0E07 /* background.png in Resources */,
@@ -1020,7 +1025,7 @@
 				5D6D7C971C43F9A700CA0E07 /* InputCell.xib in Resources */,
 				5D6D7C131C43F9A700CA0E07 /* Images.xcassets in Resources */,
 				5D0D968B1D8E33B600CCE29D /* bulk.png in Resources */,
-				5D0D96BC1D8E40E700CCE29D /* card3.png in Resources */,
+				5D0D96BC1D8E40E700CCE29D /* cardbg3.png in Resources */,
 				5D6D7C561C43F9A700CA0E07 /* login3.png in Resources */,
 				5D6D7C541C43F9A700CA0E07 /* delete_btn.png in Resources */,
 				5D6D7C591C43F9A700CA0E07 /* setting_time_bg.png in Resources */,
@@ -1030,8 +1035,8 @@
 				5D0D968A1D8E33B600CCE29D /* back.png in Resources */,
 				5D6D7C801C43F9A700CA0E07 /* PasscodeViewController.xib in Resources */,
 				5D6D7C511C43F9A700CA0E07 /* buttonEnable.png in Resources */,
-				5D0D96BF1D8E40E700CCE29D /* card6.png in Resources */,
-				5D0D96C31D8E40E700CCE29D /* card10.png in Resources */,
+				5D0D96BF1D8E40E700CCE29D /* card3.png in Resources */,
+				5D0D96C31D8E40E700CCE29D /* card7.png in Resources */,
 				5D6D7C4F1C43F9A700CA0E07 /* bgFooter.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1207,13 +1212,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				DEVELOPMENT_TEAM = HZ65PG3W65;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Coin_game/Prefix.pch;
 				INFOPLIST_FILE = Coin_game/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.dht.coingame;
 				PRODUCT_NAME = CardGame_19_9_2016;
-				PROVISIONING_PROFILE = "0baa0642-bfec-4849-a47a-178a1a8ff6cb";
+				PROVISIONING_PROFILE = "423255fd-39b1-4f80-b11d-b18e934dbcc9";
+				PROVISIONING_PROFILE_SPECIFIER = dht.all.develop;
 				SDKROOT = iphoneos8.1;
 				WRAPPER_EXTENSION = app;
 			};
