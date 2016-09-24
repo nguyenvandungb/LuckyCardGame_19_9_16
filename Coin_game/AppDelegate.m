@@ -200,14 +200,14 @@ static NSString * const kCoreData = @"Lucky.xcdatamodeld";
     [MagicalRecord setupCoreDataStackWithStoreNamed:coreDataFileName];
     
     NSArray *titles = @[
-                        @"A賞",
-                        @"B賞",
-                        @"C賞",
-                        @"D賞",
-                        @"E賞",
-                        @"F賞",
-                        @"G賞",
-                        @"H賞"
+                        @"ホテルグランヴィア京都賞",
+                        @"Porta賞",
+                        @"THE CUBE賞",
+                        @"EKI collection A賞",
+                        @"EKI collection B賞",
+                        @"EKI collection C賞",
+                        @"EKI collection D賞",
+                        @"はずれ"
                         ];
     NSArray *arr = [Reward MR_findAll];
     if (!arr || arr.count ==0){
